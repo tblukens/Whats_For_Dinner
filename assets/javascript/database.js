@@ -2,12 +2,12 @@ $(document).ready(function () {
 
   // Initialize Firebase's Realtime Database JavaScript SDK
   var config = {
-    apiKey: "AIzaSyD9fyj4PKdPdYQOFbya1qI9r1B0oi5fBPo",
-    authDomain: "what-s-for-dinner-1c1a8.firebaseapp.com",
-    databaseURL: "https://what-s-for-dinner-1c1a8.firebaseio.com",
-    projectId: "what-s-for-dinner-1c1a8",
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
     storageBucket: "",
-    messagingSenderId: "627573806356"
+    messagingSenderId: ""
   };
   firebase.initializeApp(config);
 

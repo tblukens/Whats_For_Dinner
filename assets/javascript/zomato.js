@@ -3,7 +3,7 @@ $(document).ready(function () {
         $("#restaurantArea").empty();
         var location = "Kansas City, " + $("#find-restaurant").val().trim();
 
-        var zomato_api_key = "f97a42723062b9a1fedcd6ecac3d1dbb";
+        var zomato_api_key = "";
         var zomatoUrl = "https://developers.zomato.com/api/v2.1/locations?query=" + location;
         console.log(location);
 

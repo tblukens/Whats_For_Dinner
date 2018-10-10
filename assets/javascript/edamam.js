@@ -74,10 +74,6 @@ $(document).ready(function () {
         $("#find-recipe").val("");
     }
 
-
-    app_id = "2e6d0cdb";
-    api_key = "d51c1fc90751f8b5326558e771428dbd";
-
     $("#search-recipe").on("click", function (e) {
         if ($("#find-recipe").val() !== "") {
             searchTerm = $("#find-recipe").val().trim();
