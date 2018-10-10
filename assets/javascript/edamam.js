@@ -2,6 +2,8 @@ var recipeArr = [];
 var saveToPlanner = [];
 var randomRecipe = ["Slow Cooker Pot Roast", "Asian Chicken Skillet", "Easy Pulled Pork", "Shrimp Scampi", "One-Pot Chili", "Enchiladas", "Chicken Alfredo", "Coconut Breaded Shrimp", "Macaroni and Cheese", "Broccoli Chicken Teriyaki", "Turkey Meatballs"];
 var searchTerm = "";
+var app_id = EDAMAM_ID;
+var api_key = EDAMAM_KEY;
 $(document).ready(function () {
     var searchFunction = function (searchTerm) {
 
