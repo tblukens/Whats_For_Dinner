@@ -1,6 +1,8 @@
 # What's For Dinner by _Group 5 Studio_
 ___
-###NOTE: To get the search functions to work you will have to clone the repo to your computer and create a keys.js file in the assets/javascript folder. This file will need variables (var EDAMAM_ID) with your own Edamam API ID, (var EDAMAM_KEY) with your own Edamam API key, and (var ZOMATO) with your own Zomato API key.
+## [Original group project repo.](https://github.com/keenwilson/group5-studio-meal-plan)
+___
+### NOTE: To get the search functions to work you will have to clone the repo to your computer and create a keys.js file in the assets/javascript folder. This file will need variables (var EDAMAM_ID) with your own Edamam API ID, (var EDAMAM_KEY) with your own Edamam API key, and (var ZOMATO) with your own Zomato API key.
 ___
 #### **A meal plan generator browser-based app** that allows the user to save searched recipes to weekly meal planner
 
