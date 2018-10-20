@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 $(document).ready(function () {
     $("#search-restaurant").click(function () {
         $("#restaurantArea").empty();
