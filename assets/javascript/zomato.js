@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#search-restaurant").click(function () {
         $("#restaurantArea").empty();
-        var location = "Kansas City, " + $("#find-restaurant").val().trim();
+        var location = $("#find-restaurant").val().trim();
 
         var zomato_api_key = process.env.ZOMATO;
         var zomatoUrl = "https://developers.zomato.com/api/v2.1/locations?query=" + location;
