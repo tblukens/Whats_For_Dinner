@@ -14,30 +14,40 @@ app.use('/', express.static(__dirname + '/'));
 app.post("/api/edamam", function (req, res) {
     // console.log(req.body)
     let searchTerm = req.body.searchTerm;
-    // console.log(searchTerm)
+    console.log(searchTerm)
     let edamamURL = `https://api.edamam.com/search?q=${searchTerm}&app_id=${process.env.EDAMAM_ID}&app_key=${process.env.EDAMAM_KEY}`
     // return res.json(characters);
     axios.get(edamamURL)
-    .then(response => {
-        let test = response;
-        console.log(test)
-        return res.send(test.data)
-    }).catch(error => {console.log(error)})
+        .then(response => {
+            return res.send(response.data)
+        }).catch(error => { console.log(error) })
     // res.send("IT WORKED")
 });
 
 
-app.post("/api/characters", function (req, res) {
 
-    var newcharacter = req.body;
 
-    newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+app.post("/api/zomato", function (req, res) {
+    let requestData = req.body.city;
+    console.log(req.body)
+    console.log(`||-- ${requestData} --||`)
+    axios.get(`https://developers.zomato.com/api/v2.1/locations?query=${requestData}`, {
+        headers: { 'user-key': process.env.ZOMATO_API_KEY },
 
-    console.log(newcharacter);
+    }).then(response => {
+        // res.send(response.data)
+        var entity_id = response.data.location_suggestions[0].entity_id;
+        var entity_type = response.data.location_suggestions[0].entity_type;
+        // console.log(entity_id, entity_type)
+        axios.get(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${entity_id}&entity_type=${entity_type}`, {
+            headers: { 'user-key': process.env.ZOMATO_API_KEY },
 
-    characters.push(newcharacter);
-
-    res.json(newcharacter);
+        }).then(detailsResponse => {
+            // res.send(detailsResponse.data)
+            // console.log(detailsResponse)
+            res.send(detailsResponse.data)
+        }).catch(error => { console.log(error) })
+    }).catch(error => { console.log(error) })
 });
 
 
